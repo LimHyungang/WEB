@@ -1,19 +1,22 @@
 var Body = {
   setColor:function (color) {
-    document.querySelector('body').style.color = color;
+    // document.querySelector('body').style.color = color;
+    $('body').css('color', color);
   },
 
   setBackgroundColor:function (color) {
-    document.querySelector('body').style.backgroundColor = color;
+    // document.querySelector('body').style.backgroundColor = color;
+    $('body').css('backgroundColor', color);
   }
 }
 
 var Link = {
   setColor:function (color) {
-    var alist = document.querySelectorAll('a');
-    for (var i = 0; i < alist.length; i++) {
-      alist[i].style.color = color;
-    }
+    // var alist = document.querySelectorAll('a');
+    // for (var i = 0; i < alist.length; i++) {
+    //   alist[i].style.color = color;
+    // }
+    $('a').css('color', color);
   }
 }
 
