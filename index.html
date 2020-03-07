@@ -16,11 +16,13 @@
         })
       });
     ">WEB</a></h1>
-    <input type="button" value="night" onclick="
-        nightDayHandler(this);
-    ">
     <div id="grid">
-      <ol>
+      <ul>
+        <li id="bright">
+          <input type="button" value="night" onclick="
+              nightDayHandler(this);
+          ">
+        </li><br>
         <li><a onclick="
           fetch('html').then(function(response) {
             response.text().then(function(text) {
@@ -42,7 +44,7 @@
             })
           });
         ">JavaScript</a></li>
-      </ol>
+      </ul>
       <article>
         <h2> WEB </h2>
         <p>
