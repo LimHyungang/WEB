@@ -6,19 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="colors.js"></script>
+    <script src="navList.js"></script>
   </head>
   <body>
     <h1><a href="#!web" onclick="fetchPage('web')">WEB</a></h1>
     <div id="grid">
-      <ul>
+      <ul id="nav">
         <li id="bright">
           <input type="button" value="night" onclick="
               nightDayHandler(this);
          ">
         </li><br>
-        <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
-        <li><a href="#!mycss" onclick="fetchPage('mycss')">CSS</a></li>
-        <li><a href="#!javascript" onclick="fetchPage('javascript')">JavaScript</a></li>
       </ul>
       <article>
         <h2> WEB </h2>
@@ -30,19 +28,5 @@
         </p>
       </article>
     </div>
-    <script>
-      function fetchPage(name) {
-        fetch(name).then(function(response) {
-          response.text().then(function(text) {
-            document.querySelector('article').innerHTML = text;
-          })
-        });
-      }
-      if (location.hash) {
-        fetchPage(location.hash.substr(2));
-      } else {
-        fetchPage('web');
-      }
-    </script>
   </body>
 </html>
